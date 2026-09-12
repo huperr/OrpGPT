@@ -17,6 +17,8 @@ async function input() {
       })
     });
     const data = await response.json()
+    console.log("response:", data)
+    console.log("status: ", response.status)
     const li = document.createElement("li")
     li.textContent = "OrpGPT: " + data.choices[0].message.content
     outputList.appendChild(li)

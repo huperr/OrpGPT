@@ -17,15 +17,15 @@ async function input() {
       })
     });
     const data = await response.json()
-    console.log("response:", data)
-    console.log("status: ", response.status)
+    if (!response.ok) {
+      console.log("nah rate limit again")
+    }
     const li = document.createElement("li")
     li.textContent = "OrpGPT: " + data.choices[0].message.content
     outputList.appendChild(li)
     outputTxt.textContent = ""
-    console.log("replied")
   }
   catch(error) {
-    outputTxt.textContent = "Error: " + error.message
+    outputTxt.textContent = "Error: i dont have money"
   }
 }

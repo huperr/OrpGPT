@@ -7,7 +7,7 @@ async function input() {
   const prompt = inputTxt.value
   outputTxt.textContent = "yeah gimme a sec"
   try {
-    const response = await fetch("https://orpgpt.thehien19121003.workers.dev/", {
+    const response = await fetch("https://orpgpt-api.thehien19121003.workers.dev/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -14,7 +14,7 @@ async function input() {
       },
       body: JSON.stringify({
         message: prompt
-      });
+      })
     });
     const data = await response.json()
     const li = document.createElement("li")
